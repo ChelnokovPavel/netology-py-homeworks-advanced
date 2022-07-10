@@ -1,3 +1,6 @@
+from homework_5.wrappers import logger
+
+
 class FlatIterator:
 
     def __init__(self, nested_list):
@@ -22,6 +25,7 @@ class FlatIterator:
             raise StopIteration
 
 
+@logger(path='.')
 def flat_generator(nested_list):
     if isinstance(nested_list, list):
         for i in nested_list:
